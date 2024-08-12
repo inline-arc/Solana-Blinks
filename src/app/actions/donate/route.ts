@@ -20,16 +20,23 @@ export async function GET(request: Request) {
   const url = new URL(request.url); 
   const payload: ActionGetResponse = {
     
-    icon: "https://i.pinimg.com/564x/9d/9c/d4/9d9cd4fa1d875e4c22851eb55b2e43f7.jpg",
-    title: "Solona Radar Hackathon", 
-    description: "Book your Spot Now limited spots.", 
+    icon: "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=280,height=280/event-covers/v7/3063cc25-6efa-4389-8441-3d03f528b26d",
+    title: "Solana Hacker Houses", 
+    description: "Hosted by Solana Foundation Friday, July 26 Join the Solana Foundation's Solana Hacker House on July 26 for a 2-day event featuring industry leaders, panels, & workshops. Connect with the Solana ecosystem and network in person!", 
     label: "Donate", 
     links: {
       actions: [
         {
-          label: "Donate 0.1 SOL", 
-          href: `${url.href}?amount=0.1`, 
+          label: "1.0 SOL", 
+          href: `${url.href}?amount=0.1`,
+          parameters: [
+            {
+              name: "mail", 
+              label: "Enter your mail to book a spot",
+            }
+          ]
         },
+
       ],
     },
   };
